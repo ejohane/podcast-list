@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  webapp:
+    build: 
+      context: .
+      dockerfile: ./app/Dockerfile
+    depends_on:
+      - api    
+    ports:
+      - "3000:5000"
+
+  api:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile   
+    ports:
+      - "8081:8081"
+
+  
