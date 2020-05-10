@@ -10,10 +10,6 @@ export const app = express();
 
 app.use(cors())
 
-app.get("/", (req, res) => {
-    res.send("hello world")
-})
-
 app.get("/podcast", getPodcasts)
 
 const port = process.env.PORT ?? 8080

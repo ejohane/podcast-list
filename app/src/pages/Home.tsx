@@ -58,7 +58,7 @@ const Home = () => {
    * @param name The podcast name
    * @param sort The result sort direction
    */
-  const getPodcasts = async (name: string, sort?) => {    
+  const getPodcasts = async (name: string, sort?: SortDirection) => {    
     const podcasts = await api.getPodcasts(auth.token, name, sort)
     setPodcasts(podcasts)
     setEnableSort(true)
